@@ -55,7 +55,7 @@ const Contact = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "YOUR_ACCESS_KEY_HERE", // User needs to replace this
+          access_key: "79b3c690-e341-41e2-87ef-795c9c3b810a",
           name: `${formData.firstName} ${formData.lastName}`,
           email: formData.email,
           message: formData.message,
