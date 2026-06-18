@@ -9,7 +9,7 @@ const Projects = () => {
   const project = {
     title: "TGSRTC Dynamic Scheduling & Demand Forecasting System",
     tags: ["Python", "XGBoost", "FastAPI", "Streamlit", "Pandas", "Parquet", "Open-Meteo API"],
-    description: "Build an end-to-end AI pipeline predicting passenger demand 2 days ahead using XGBoost with temporal, lag, weather, and Telugu festival features across 20+ TGSRTC depots.",
+    description: "Build an end-to-end AI pipeline predicting passenger demand 2 days ahead using XGBoost with temporal, lag, weather, and Telugu festival features across 97 TGSRTC depots.",
     highlights: [
       "Engineered 15+ features including day-of-week lags, 7-day rolling stats, same-DOW medians, and holiday proximity flags.",
       "Designed two scheduling engines — Delta-KMs (trip-count optimization) and EPK/OR (earnings-per-km decisions).",
