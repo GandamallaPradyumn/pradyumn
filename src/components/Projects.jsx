@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import accuracyImage from '../assets/projects/dashboard_accuracy.png';
+import overviewImage from '../assets/projects/operations_overview.png';
 
 const Projects = () => {
+  const [activeScreen, setActiveScreen] = useState('accuracy');
+
   const project = {
     title: "TGSRTC Dynamic Scheduling & Demand Forecasting System",
     tags: ["Python", "XGBoost", "FastAPI", "Streamlit", "Pandas", "Parquet", "Open-Meteo API"],
@@ -33,7 +37,7 @@ const Projects = () => {
                     viewport={{ once: true }}
                     className="group relative bg-[#f8f8f8] rounded-[2.5rem] p-8 md:p-12 overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500"
                 >
-                    <div className="flex flex-col md:flex-row gap-12">
+                    <div className="flex flex-col lg:flex-row gap-12 items-center">
                         <div className="flex-1">
                             <div className="flex flex-wrap gap-2 mb-6">
                                 {project.tags.map(tag => (
@@ -57,12 +61,53 @@ const Projects = () => {
                                 ))}
                             </ul>
                         </div>
-                        {/* Placeholder for project image/visual */}
-                        <div className="w-full md:w-1/3 bg-gray-200 rounded-3xl aspect-square flex items-center justify-center relative overflow-hidden border-4 border-white shadow-xl">
-                             <div className="absolute inset-0 bg-gradient-to-br from-[#818CF8]/20 to-transparent z-10" />
-                             <svg className="w-20 h-20 text-gray-400 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                             </svg>
+                        
+                        {/* Interactive Screen Mockup Container */}
+                        <div className="w-full lg:w-5/12 flex flex-col gap-4">
+                             {/* Sleek Browser/Tablet Mockup */}
+                             <div className="bg-[#1e1e2f] rounded-2xl border border-indigo-500/10 overflow-hidden shadow-2xl transition-all duration-300">
+                                  {/* Window Title Bar */}
+                                  <div className="bg-[#12121e] px-4 py-2.5 flex items-center gap-2 border-b border-indigo-950">
+                                       <span className="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                                       <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                                       <span className="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                                       <span className="text-[10px] text-indigo-200/40 font-mono ml-4 truncate">
+                                            {activeScreen === 'accuracy' ? 'demand_accuracy.png' : 'operations_overview.png'}
+                                       </span>
+                                  </div>
+                                  {/* Image Body */}
+                                  <div className="aspect-[16/9] w-full bg-[#131321] relative overflow-hidden flex items-center justify-center p-1.5">
+                                       <img 
+                                            src={activeScreen === 'accuracy' ? accuracyImage : overviewImage} 
+                                            alt={activeScreen === 'accuracy' ? 'Demand Prediction Accuracy Dashboard' : 'Operations Overview Scatter Plot'} 
+                                            className="w-full h-full object-contain rounded-lg shadow-inner"
+                                       />
+                                  </div>
+                             </div>
+
+                             {/* Interactive Navigation controls */}
+                             <div className="flex justify-center gap-3 text-xs font-bold font-mono">
+                                  <button 
+                                       onClick={() => setActiveScreen('accuracy')}
+                                       className={`px-4 py-2 rounded-full border transition-all duration-300 cursor-pointer ${
+                                            activeScreen === 'accuracy' 
+                                                 ? 'bg-[#1A1A2E] text-white border-[#1A1A2E] shadow-md shadow-indigo-950/20' 
+                                                 : 'bg-[#1A1A2E]/5 text-gray-500 border-gray-200 hover:border-gray-400 hover:text-black'
+                                       }`}
+                                  >
+                                       Demand Accuracy
+                                  </button>
+                                  <button 
+                                       onClick={() => setActiveScreen('overview')}
+                                       className={`px-4 py-2 rounded-full border transition-all duration-300 cursor-pointer ${
+                                            activeScreen === 'overview' 
+                                                 ? 'bg-[#1A1A2E] text-white border-[#1A1A2E] shadow-md shadow-indigo-950/20' 
+                                                 : 'bg-[#1A1A2E]/5 text-gray-500 border-gray-200 hover:border-gray-400 hover:text-black'
+                                       }`}
+                                  >
+                                       Operations Overview
+                                  </button>
+                             </div>
                         </div>
                     </div>
                 </motion.div>
