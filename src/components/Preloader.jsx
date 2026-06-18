@@ -31,7 +31,7 @@ const Preloader = () => {
             className="relative text-5xl md:text-7xl font-black tracking-tighter"
           >
             {/* Background text (empty state) */}
-            <div className="text-red-900/30">
+            <div className="text-white/10">
               Pradyumn
             </div>
 
