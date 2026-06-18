@@ -102,7 +102,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="bg-[#ff2a2a] w-full md:w-[85%] lg:w-[75%] p-8 md:p-16 text-white flex flex-col justify-between"
+          className="bg-[#1A1A2E] border border-indigo-500/20 w-full md:w-[85%] lg:w-[75%] p-8 md:p-16 text-white flex flex-col justify-between"
         >
           <div className="text-xs font-bold tracking-[0.2em] mb-12 md:mb-20 uppercase opacity-90">
             Reach Us
@@ -194,7 +194,7 @@ const Contact = () => {
                     type="submit" 
                     disabled={status.submitting}
                     className={`px-8 py-3 rounded-full border border-white/40 text-white font-bold flex items-center justify-center gap-3 transition-all duration-300 group whitespace-nowrap self-start sm:self-auto ${
-                      status.submitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-white hover:text-[#ff2a2a]'
+                      status.submitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-white hover:text-[#1A1A2E]'
                     }`}
                   >
                     {status.submitting ? 'Sending...' : status.success ? 'Success!' : 'Send'}

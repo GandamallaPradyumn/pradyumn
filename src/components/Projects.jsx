@@ -42,7 +42,7 @@ const Projects = () => {
                                     </span>
                                 ))}
                             </div>
-                            <h3 className="text-3xl font-black mb-6 text-gray-900 group-hover:text-[#ff2a2a] transition-colors">
+                            <h3 className="text-3xl font-black mb-6 text-gray-900 group-hover:text-[#818CF8] transition-colors">
                                 {project.title}
                             </h3>
                             <p className="text-gray-600 text-lg mb-8 leading-relaxed font-medium">
@@ -51,7 +51,7 @@ const Projects = () => {
                             <ul className="space-y-4">
                                 {project.highlights.map((highlight, idx) => (
                                     <li key={idx} className="flex items-start gap-3 text-gray-700 font-medium">
-                                        <span className="mt-1.5 w-1.5 h-1.5 bg-[#ff2a2a] rounded-full shrink-0" />
+                                        <span className="mt-1.5 w-1.5 h-1.5 bg-[#818CF8] rounded-full shrink-0" />
                                         {highlight}
                                     </li>
                                 ))}
@@ -59,7 +59,7 @@ const Projects = () => {
                         </div>
                         {/* Placeholder for project image/visual */}
                         <div className="w-full md:w-1/3 bg-gray-200 rounded-3xl aspect-square flex items-center justify-center relative overflow-hidden border-4 border-white shadow-xl">
-                             <div className="absolute inset-0 bg-gradient-to-br from-[#ff2a2a]/20 to-transparent z-10" />
+                             <div className="absolute inset-0 bg-gradient-to-br from-[#818CF8]/20 to-transparent z-10" />
                              <svg className="w-20 h-20 text-gray-400 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                              </svg>

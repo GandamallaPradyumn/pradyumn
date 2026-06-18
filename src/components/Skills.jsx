@@ -69,10 +69,10 @@ const Skills = () => {
             damping: 20,
           },
         }}
-        className="group relative bg-white border border-black/5 rounded-3xl p-6 h-fit shadow-sm hover:shadow-xl hover:shadow-red-500/5 transition-all duration-500"
+        className="group relative bg-white border border-black/5 rounded-3xl p-6 h-fit shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-500"
       >
         {/* Subtle glow on hover */}
-        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-red-500/0 via-red-500/0 to-red-500/0 group-hover:from-red-500/5 group-hover:to-red-500/5 transition-all duration-500 pointer-events-none" />
+        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-500/0 via-indigo-500/0 to-indigo-500/0 group-hover:from-indigo-500/5 group-hover:to-indigo-500/5 transition-all duration-500 pointer-events-none" />
  
         {/* Card content */}
         <div className="relative z-10">
@@ -88,7 +88,7 @@ const Skills = () => {
                 variants={skillPillVariants}
                 initial="initial"
                 whileHover="hover"
-                className="px-3 py-1.5 text-xs font-medium text-black bg-black/3 hover:bg-red-500/10 border border-black/5 hover:border-red-500/20 rounded-full transition-all duration-300 cursor-default select-none hover:text-red-500"
+                className="px-3 py-1.5 text-xs font-medium text-black bg-black/3 hover:bg-indigo-500/10 border border-black/5 hover:border-indigo-500/20 rounded-full transition-all duration-300 cursor-default select-none hover:text-indigo-600"
               >
                 {skill}
               </motion.button>
@@ -159,7 +159,7 @@ const Skills = () => {
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-        className="absolute top-10 right-10 w-32 h-32 bg-red-500 rounded-full blur-3xl pointer-events-none"
+        className="absolute top-10 right-10 w-32 h-32 bg-indigo-500 rounded-full blur-3xl pointer-events-none"
       />
  
       <motion.div
@@ -172,7 +172,7 @@ const Skills = () => {
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-        className="absolute bottom-20 left-5 w-40 h-40 bg-red-500 rounded-full blur-3xl pointer-events-none"
+        className="absolute bottom-20 left-5 w-40 h-40 bg-indigo-500 rounded-full blur-3xl pointer-events-none"
       />
     </section>
   );

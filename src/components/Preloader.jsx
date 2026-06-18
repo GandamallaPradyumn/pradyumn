@@ -22,7 +22,7 @@ const Preloader = () => {
           initial={{ y: 0 }}
           exit={{ y: "-100%" }}
           transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 w-full h-screen bg-[#ff2a2a] z-[100000] flex items-center justify-center"
+          className="fixed inset-0 w-full h-screen bg-[#1A1A2E] z-[100000] flex items-center justify-center"
         >
           {/* Logo Container */}
           <motion.div 
@@ -32,7 +32,7 @@ const Preloader = () => {
           >
             {/* Background text (empty state) */}
             <div className="text-red-900/30">
-              Pradyumn<span className="text-red-900/30">.</span>
+              Pradyumn
             </div>
 
             {/* Foreground text (water fill state) */}
@@ -42,7 +42,7 @@ const Preloader = () => {
               animate={{ clipPath: 'inset(0% 0 0 0)' }}
               transition={{ duration: 1.6, ease: "easeInOut", delay: 0.2 }}
             >
-              Pradyumn<span className="text-black">.</span>
+              Pradyumn
             </motion.div>
           </motion.div>
 

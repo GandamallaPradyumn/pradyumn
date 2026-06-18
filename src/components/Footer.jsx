@@ -7,19 +7,24 @@ const Footer = () => {
       {/* Top Row */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 w-full font-medium">
         <div className="flex flex-col gap-1">
-          <p>Cinematic & Creative Production</p>
-          <p>Lighting, Editing, Photo</p>
-          <p>Motion Graphics</p>
+          <p className="font-bold text-white uppercase tracking-wider mb-2">Focus Areas</p>
+          <p>AI Pipelines & Backend Systems</p>
+          <p>Data Engineering & ETL</p>
+          <p>Interactive Dashboards & APIs</p>
         </div>
         
         <div className="flex flex-col gap-1 md:items-center">
-          <p>5+ years of experience</p>
-          <a href="#work" className="underline hover:text-white transition-colors mt-1 underline-offset-4 decoration-1">View Work</a>
+          <p className="font-bold text-white uppercase tracking-wider mb-2">Professional Profiles</p>
+          <div className="flex flex-col gap-1.5 md:items-center">
+            <a href="https://github.com/GandamallaPradyumn" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-4 decoration-1 decoration-white/20">GitHub</a>
+            <a href="https://www.linkedin.com/in/pradyumn-gandamalla" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline underline-offset-4 decoration-1 decoration-white/20">LinkedIn</a>
+          </div>
         </div>
         
         <div className="flex flex-col gap-1 md:items-end">
-          <p>Worldwide Available</p>
-          <p>{new Date().getFullYear()}</p>
+          <p className="font-bold text-white uppercase tracking-wider mb-2">Location</p>
+          <p>Hyderabad, Telangana, India</p>
+          <p>Open to Remote & Hybrid</p>
         </div>
       </div>
 
